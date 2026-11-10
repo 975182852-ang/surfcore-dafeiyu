@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "id": "char-dafeiyu-public",
+  "name": "大肥鱼",
+  "source": "public-template",
+  "persona": "persona.md",
+  "memory": "memory",
+  "bili": "bili"
+}

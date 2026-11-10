@@ -1,0 +1,34 @@
+name: Windows validation
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Validate source and deployment
+        shell: pwsh
+        run: |
+          $env:PSModulePath = Join-Path $env:WINDIR 'System32\WindowsPowerShell\v1.0\Modules'
+          $env:DSH_HOME = Join-Path $env:RUNNER_TEMP 'dafeiyu-ci-dsh'
+          npm run test:audit
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          npm run test:regressions
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          npm run test:deploy
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          npm run privacy:public
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          node scripts/release-manifest.mjs --verify-ref HEAD
+          exit $LASTEXITCODE
