@@ -17,7 +17,7 @@ const publishDev = read('scripts/publish-dev.mjs');
 const version = read('scripts/version.mjs');
 
 // 1) 版本规则：dev 版本合法、且比较上低于同号正式版
-ok(/\(rc\|beta\|alpha\|dev\)/.test(version), 'version.mjs 允许 -dev.N 版本');
+ok(/\(rc\|beta\|alpha\|dev(?:\|dafeiyu)?\)/.test(version), 'version.mjs 允许 -dev.N 版本');
 ok(updates.includes('pre-release'), '更新器识别 Pre-release');
 ok(updates.includes("code: 'DEV_NO_BUILD'"), '没有 dev 构建时有明确状态');
 ok(updates.includes("'channel-switch'"), '从正式版切 dev 允许安装一次');

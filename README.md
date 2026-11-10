@@ -57,6 +57,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/install-local.ps
 - **余额查询**：可选配置 DeepSeek 官方余额查询；密钥只由本机工具读取，不交给模型。程序额度和 API 余额是两回事。
 - **空间日记**：默认关闭。本人显式启用后，晚间22:05附近写自己的活动感想，好友可见、每天至多一篇，使用去身份化摘要。
 - **B站**：上游相关代码保留，但本版默认关闭，不自动刷视频或发布。
+- **语音**：`qq_send_voice` 发送、`qq_list_voices` 查看本地语音库，默认关闭；需要自行提供音频和可选语音运行时后启用。
 
 ## 人格与数据
 
