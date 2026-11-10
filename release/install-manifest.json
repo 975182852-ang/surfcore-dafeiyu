@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "version": "0.8.8-dafeiyu.1",
   "source": "git:HEAD",
-  "generatedAt": "2026-11-10T05:27:46.162Z",
+  "generatedAt": "2026-11-10T05:28:55.166Z",
   "files": {
     ".gitattributes": "7cf1f228058711f26c770ac049a126f762660deb89fbd71ae316f5cfb89fdda3",
     ".github/workflows/ci.yml": "d719bd17bc0979db84e67f3ad437a9b4d05533b0e2ea922ae9cacfd2eecdb11c",
@@ -11,7 +11,7 @@
     "AGENTS.md": "0f5e651f8003d345caef682264d474b85c155c7e49e6bbf58216c7a399e3ccde",
     "CHANGELOG.md": "2cd302a21882e848139b38636e15ad1fe374ef203b7122da251f5cd80d499ef4",
     "LICENSE": "4f6e6af70a3c1cfc06ad3c9fe09abfb142d02d99abae28b0b22128b7a2d90e39",
-    "README.md": "2f25549483c230a12fca448325745810f1933e2f195699b0b0e3149a985ca3ba",
+    "README.md": "2da1ecd89065f1ed1d3432d0b200f13711bbd3a9efe8b238d97ac099966d2a4a",
     "RULES.md": "a3ac43e6613e50fdc6c5cdb8fb233b5e8ef60fcb7f2ce20c98fff2bab210cb76",
     "_snowluma-catalog.json": "775cf10d4622644eeb0506dea7a30125423e6c70342a2fae2f1b0818d2441cd6",
     "config.example.json": "127341bca92bb61299ed9299fb4d7608f9b5aca827ab96df599f2054a6fbc14d",
